@@ -81,6 +81,7 @@ footer {
 }
 
 .bio-section .photo img {
+    width: 100%;
     max-width: 200px;
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -118,7 +119,8 @@ footer {
 }
 
 .about-section .photo-stack img {
-    width: 200px;
+    width: 100%;
+    max-width: 200px;
     margin-bottom: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     transform: translateX(60px);
@@ -177,7 +179,8 @@ footer {
 }
 
 .hobbies-section .photos img {
-    width: 200px;
+    width: 100%;
+    max-width: 200px;
     margin-bottom: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     margin-left: 60px;
