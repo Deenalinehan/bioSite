@@ -40,6 +40,7 @@ nav ul li a:hover {
 main {
     margin: 20px;
     color: #000000; /* Black text for readability */
+    padding-bottom: 100px;
 }
 
 footer {
@@ -68,4 +69,124 @@ footer {
 
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.bio-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #ded7b6;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.bio-section .photo img {
+    max-width: 200px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-right: 40px;
+}
+
+.bio-section .bio {
+    flex-grow: 1;
+    margin-left: 40px;
+}
+
+.bio-section .bio h2 {
+    color: #000000;
+}
+
+.bio-section .bio p {
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+.about-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 30px;
+    background-color: #ded7b6;
+    padding: 20px;
+    border: 1px solid #bda381;
+}
+
+.about-section .photo-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.about-section .photo-stack img {
+    width: 200px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transform: translateX(60px);
+    transition: transform 0.3s ease;
+}
+
+.about-section .photo-stack img:nth-child(2) {
+    transform: translateX(30px);
+}
+
+.about-section .photo-stack img:nth-last-child(3) {
+    transform: translateX(0px);
+}
+
+.about-section .about {
+    flex-grow: 1;
+    margin-left: 80px;
+}
+
+.about-section .about h2 {
+    color: #000000;
+}
+
+.about-section .about p {
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+.hobbies-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #ded7b6;
+    padding: 20px;
+    border: 1px solid #bda381;
+}
+
+.hobbies-section .hobbies {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.hobbies-section .hobbies h2 {
+    color: #000000;
+}
+
+.hobbies-section .hobbies p {
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+.hobbies-section .photos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.hobbies-section .photos img {
+    width: 200px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-left: 60px;
+}
+
+.hobbies-section .photos img:nth-child(2) {
+    margin-left: 30px;
+}
+
+.hobbies-section .photos img:nth-child(3) {
+    margin-left: 0;
 }
