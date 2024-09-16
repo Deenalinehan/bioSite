@@ -191,3 +191,37 @@ footer {
 .hobbies-section .photos img:nth-child(3) {
     margin-left: 0;
 }
+
+/* Responsive layout for mobile screens */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .bio-section {
+        flex-direction: column;
+    }
+
+    .bio-section .photo {
+        margin-bottom: 20px;
+    }
+
+    .bio-section .bio {
+        text-align: center;
+        margin: 0;
+    }
+
+    .about-section, .hobbies-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-section .about, .hobbies-section .hobbies {
+        margin: 0;
+        text-align: center;
+    }
+
+    .about-section .photo-stack img, .hobbies-section .photos img {
+        margin-left: 0;
+    }
+}
