@@ -53,14 +53,14 @@ footer {
     bottom: 0;
 }
 
-/* Card styles (if applicable) */
+/* Card styles */
 .card {
     background-color: #ded7b6; /* Beige for card background */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
     padding: 16px;
     margin-top: 20px;
-    color: #000000; /* Black for text */
+    color: #000000;
 }
 
 .card-title {
@@ -71,6 +71,7 @@ footer {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
+/* Bio Section */
 .bio-section {
     display: flex;
     align-items: center;
@@ -101,95 +102,68 @@ footer {
     font-size: 1.1em;
 }
 
+/* About Me Section with Centered Flexbox */
 .about-section {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-top: 30px;
+    justify-content: center; /* Centering content */
+    align-items: center;
+    flex-direction: column;
     background-color: #ded7b6;
-    padding: 20px;
+    padding: 40px;
     border: 1px solid #bda381;
+    gap: 20px; /* Space between elements */
+}
+
+.about-section h2 {
+    color: #000000;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    line-height: 1.6;
+    font-size: 1.1em;
+    text-align: center; /* Centering the text */
+    max-width: 600px; /* Limit the width for better readability */
+    margin: 0 auto;
 }
 
 .about-section .photo-stack {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    justify-content: center; /* Centering images */
+    gap: 20px; /* Space between images */
+    flex-wrap: wrap; /* Allow the images to wrap on smaller screens */
 }
 
 .about-section .photo-stack img {
-    max-width: 200px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    transform: translateX(60px);
+    max-width: 30%; /* Each image takes up 30% of the container */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
     transition: transform 0.3s ease;
 }
 
-.about-section .photo-stack img:nth-child(2) {
-    transform: translateX(30px);
+.about-section .photo-stack img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
-.about-section .photo-stack img:nth-last-child(3) {
-    transform: translateX(0px);
-}
-
-.about-section .about {
-    flex-grow: 1;
-    margin-left: 80px;
-}
-
-.about-section .about h2 {
-    color: #000000;
-}
-
-.about-section .about p {
-    line-height: 1.6;
-    font-size: 1.1em;
-}
-
-.hobbies-section {
+/* Centered Flexbox for Photos */
+.photos-flex {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    background-color: #ded7b6;
-    padding: 20px;
-    border: 1px solid #bda381;
+    justify-content: center; /* Centering photos */
+    gap: 20px; /* Space between photos */
+    margin: 20px 0;
 }
 
-.hobbies-section .hobbies {
-    flex: 1;
-    margin-right: 20px;
+.photos-flex img {
+    width: 30%; /* Each image takes up 30% of the container */
+    height: auto;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    transition: transform 0.3s ease;
 }
 
-.hobbies-section .hobbies h2 {
-    color: #000000;
-}
-
-.hobbies-section .hobbies p {
-    line-height: 1.6;
-    font-size: 1.1em;
-}
-
-.hobbies-section .photos {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.hobbies-section .photos img {
-    width: 100%;
-    max-width: 200px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    margin-left: 60px;
-}
-
-.hobbies-section .photos img:nth-child(2) {
-    margin-left: 30px;
-}
-
-.hobbies-section .photos img:nth-child(3) {
-    margin-left: 0;
+.photos-flex img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
 /* Responsive layout for mobile screens */
@@ -211,17 +185,23 @@ footer {
         margin: 0;
     }
 
-    .about-section, .hobbies-section {
+    .about-section, .photos-flex {
         flex-direction: column;
         align-items: center;
     }
 
-    .about-section .about, .hobbies-section .hobbies {
-        margin: 0;
+    .about-section .photo-stack img, .photos-flex img {
+        width: 100%; /* Resize text and images to fit the screen */
+        max-width: 100%;
         text-align: center;
     }
 
-    .about-section .photo-stack img, .hobbies-section .photos img {
-        margin-left: 0;
+    .about-section .photo-stack, .photos-flex {
+        flex-direction: column; /* Stack images on top of each other */
+        align-items: center;
+    }
+
+    .about-section h2, .photos-flex img {
+        text-align: center;
     }
 }
