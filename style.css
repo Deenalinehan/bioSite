@@ -146,7 +146,52 @@ footer {
     transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
-/* Centered Flexbox for Photos */
+/* Hobbies Section */
+.hobbies-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ded7b6;
+    padding: 40px;
+    border: 1px solid #bda381;
+    gap: 20px; /* Space between elements */
+}
+
+.hobbies-section h2 {
+    color: #000000;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.hobbies-section p {
+    line-height: 1.6;
+    font-size: 1.1em;
+    text-align: center; /* Centering the text */
+    max-width: 600px; /* Limit the width for better readability */
+    margin: 0 auto;
+}
+
+.hobbies-section .photos-flex {
+    display: flex;
+    justify-content: center; /* Centering photos */
+    gap: 20px; /* Space between photos */
+    flex-wrap: wrap; /* Allow the photos to wrap on smaller screens */
+}
+
+.hobbies-section .photos-flex img {
+    width: 30%; /* Each image takes up 30% of the container */
+    height: auto;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    transition: transform 0.3s ease;
+}
+
+.hobbies-section .photos-flex img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Centered Flexbox for Photos in General */
 .photos-flex {
     display: flex;
     justify-content: center; /* Centering photos */
@@ -185,23 +230,23 @@ footer {
         margin: 0;
     }
 
-    .about-section, .photos-flex {
+    .about-section, .hobbies-section, .photos-flex {
         flex-direction: column;
         align-items: center;
     }
 
-    .about-section .photo-stack img, .photos-flex img {
+    .about-section .photo-stack img, .hobbies-section .photos-flex img, .photos-flex img {
         width: 100%; /* Resize text and images to fit the screen */
         max-width: 100%;
         text-align: center;
     }
 
-    .about-section .photo-stack, .photos-flex {
+    .about-section .photo-stack, .hobbies-section .photos-flex, .photos-flex {
         flex-direction: column; /* Stack images on top of each other */
         align-items: center;
     }
 
-    .about-section h2, .photos-flex img {
+    .about-section h2, .hobbies-section h2, .photos-flex img {
         text-align: center;
     }
 }
